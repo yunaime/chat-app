@@ -15,10 +15,10 @@ const {
 } = require("./utils/users");
 
 const app = express();
-const server = http.createServer(app); // to be able to access server or express will crete ir in background
+const server = http.createServer(app); // to be able to access server or express will crete it in background
 const io = socketio(server);
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 /////////////////// Define paths for Express config /////////////////////////
 const publicDirectoryPath = path.join(__dirname, "../public");
